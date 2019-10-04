@@ -70,7 +70,7 @@ def enemy():
     enemyHP = randint(5,20)
     enemyMP = randint(5,20)
     #Below is the enemy's name, perhaps you could change this to a list and then shuffle the list, such as we did for the villager above.
-    enemyname = "Ogre"
+    enemyname = "Boss Messina"
     print ("\nSuddenly you hear a roar, and from the shadows you see an "+enemyname+" coming straight at you....")
     #print enemyname
     print ("Your enemy has %s Health Points" % str(enemyHP))
