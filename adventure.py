@@ -17,9 +17,9 @@ def clear_screen():
     os.system('cls' if os.name=='nt' else 'clear')
 
 def title():
-    print(text2art('Earth', font='alpha'))
-    print(text2art('  Lab', font='alpha'))
-    print(text2art(' Hero', font='alpha'))
+    print(text2art('I', font='alpha'))
+    print(text2art('  Cant', font='alpha'))
+    print(text2art(' Code', font='alpha'))
 
 def north():
     print ("To go north press n then enter")
@@ -40,7 +40,7 @@ def setup():
     global HP
     global MP
     #Our variable "name" is used to store our name, captured by keyboard input.
-    name = input("What is your name, earth hero?")
+    name = input("What is your title, villian?")
     #randint is a great way of adding some variety to your players statistics through randomness
     HP = randint(5,20)
     MP = randint(5,20)
@@ -51,13 +51,13 @@ def villager():
     global response
     #Below is a list, we can store lots of things in a list and then retrieve them later.
     responses = ["Hi", "Are you a hero?", "Are you from this village?", "There has been a dark shadow cast across the village"]
-    npcnamechoice = ["Roger", "Dexter", "Sarah", "Susan"]
+    npcnamechoice = ["Bordon", "Sheehan", "Alexander", "Barvey"]
     #Shuffle will shuffle the list contents into a random order.
     shuffle(npcnamechoice)
     npcname = npcnamechoice[0]
-    print ("\n["+npcname+":] Hello, my name is "+npcname+", Would you like to talk to me?\n")
+    print ("\n["+npcname+":] Hello, my name is "+npcname+", Would you like to play basketball with me?\n")
     shuffle(responses)
-    print ("Press y to talk to the villager")
+    print ("Press y to talk to athletic kid")
     if input() == "y":
         print ("%s: %s" % (npcname, responses[0]))
     else:
@@ -71,7 +71,7 @@ def enemy():
     enemyMP = randint(5,20)
     #Below is the enemy's name, perhaps you could change this to a list and then shuffle the list, such as we did for the villager above.
     enemyname = "Boss Messina"
-    print ("\nSuddenly you hear a roar, and from the shadows you see an "+enemyname+" coming straight at you....")
+    print ("\nSuddenly you hear a gunshot far in the distance, and from the shadows you see an "+enemyname+" slowly trotting towards you with his son Frankie at his side....")
     #print enemyname
     print ("Your enemy has %s Health Points" % str(enemyHP))
     print ("Your enemy has %s Magic Points" % str(enemyMP))
@@ -88,7 +88,7 @@ global HP
 global MP
 global move
 global enemyHP
-print ("Welcome to the land of Narule, %s" % name)
+print ("Welcome to the land of Brooklyn friends Highschool, %s" % name)
 #Sleep is Python's way of pausing the game for a specified number of seconds
 sleep(2)
 #Below we are using the helper functions to join a string of text to an integer via the str() helper.
