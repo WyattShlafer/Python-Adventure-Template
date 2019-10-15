@@ -22,16 +22,13 @@ def title():
     print(text2art(' Code', font='alpha'))
 
 def north():
-    print ("To go north press n then enter")
+    print ("To go to the third floor press 3 then enter")
 
 def east():
-    print ("To go east press e then enter")
-
-def south():
-    print ("to go south press s then enter")
+    print ("To go to the first floor press 1 then enter")
 
 def west():
-    print ("To go west press w then enter")
+    print ("To go to the lunch room press l then enter")
 
 
 def setup():
@@ -92,28 +89,28 @@ print ("Welcome to the land of Brooklyn friends Highschool, %s" % name)
 #Sleep is Python's way of pausing the game for a specified number of seconds
 sleep(2)
 #Below we are using the helper functions to join a string of text to an integer via the str() helper.
-print ("\nYour health is" + " " + str(HP))
-print ("Your magic skill is" + " " + str(MP))
+print ("\nYour Determination is" + " " + str(HP))
+print ("Your Intellegence skill is" + " " + str(MP))
 
 
 
 print ("Would you like to venture out into the land? Press y then enter to continue")
 #Below we use input to ask for user input, and if it is equal to y, then the code underneath is run.
 if input() == "y":
-    print ("You are in your home, with a roaring fireplace in front of you, above the fire you can see your sword and shield")
-    print ("Would you like to take your sword and shield? Press y then enter to continue")
+    print ("You wake up in your home, with the beeping of cars right outside of your window, on your doorknob, you see your backpack and pens")
+    print ("Would you like to take your Backpack and pens? Press y then enter to continue")
     if input() == "y":
         #This is a list, and it can store many items, and to do that we "append" items to the list.
         weapons = []
-        weapons.append("sword")
-        weapons.append("shield")
-        print ("You are now carrying your %s and your %s" % (weapons[0], weapons[1]))
-        print ("Armed with your %s and %s you swing open the door to your home and see a green valley gleaming in the sunshine." % (weapons[0], weapons[1]))
-    else:
+        weapons.append("pens")
+        weapons.append("backpack")
+        print ("You are now walking to Brooklyn Friends carrying your %s and your %s" % (weapons[0], weapons[1]))
+        print ("Armed with your %s and %s you swing open the front doors doors at BFS and are immediatly welcomed by Donna." % (weapons[0], weapons[1]))
+    elif input() == "n":
         print ("You choose not to take your weapons")
-        print ("Armed with your sense of humour, You swing open the door to see a green valley full of opportunity awaiting you.")
-else:
-    print ("You stay at home, sat in your favourite chair watching the fire grow colder. The land of Narule no longer has a hero.")
+        print ("Armed with your sense of humour, you swing open the front doors doors at BFS and are immediatly welcomed by Donna.")
+elif input() == "sick":
+    print ("You stay at home, curled up in bed with a box of tissues at your side watching tv. Your class will miss you.")
     print ("Game Over")
     sys.exit(0)
 
@@ -125,16 +122,16 @@ north()
 east()
 west()
 move = input("Where would you like to go? ")
-if move == 'n':
-    print ("\nYou move to the north, walking in the sunshine.")
-    print ("A villager is in your path and greets you")
+if move == '3':
+    print ("\nYou walk to the 3rd floor to go to math class.")
+    print ("Michael Leibis is in your path and greets you")
 #elif is short for Else If and it means that if the previous condition is false, to check this condition to see if that is true.
-elif move == 'e':
-    print ("\nYou walk to the river which lies to the east of your home.")
-    print ("A villager is in your path and greets you")
-elif move == 'w':
-    print ("\nYou walk to the field of wild flowers, stopping to take in the beauty")
-    print ("A villager is in your path and greets you\n")
+elif move == '1':
+    print ("\nYou walk to the 1st floor to go to art history class.")
+    print ("Mark Buenzle is in your path and greets you")
+elif move == 'l':
+    print ("\nYou walk to the lunch room, to get food")
+    print ("Frankie Messina is in your path and greets you\n")
 
 villager()
 enemy()
