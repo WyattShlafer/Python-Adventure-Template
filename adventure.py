@@ -18,8 +18,8 @@ def clear_screen():
 
 def title():
     print(text2art('I', font='alpha'))
-    print(text2art('  Cant', font='alpha'))
-    print(text2art(' Code', font='alpha'))
+    print(text2art('Cant', font='alpha'))
+    print(text2art('Code', font='alpha'))
 
 def north():
     print ("To go to the third floor press 3 then enter")
@@ -37,7 +37,7 @@ def setup():
     global HP
     global MP
     #Our variable "name" is used to store our name, captured by keyboard input.
-    name = input("What is your title, villian?")
+    name = input("What does your school ID say?")
     #randint is a great way of adding some variety to your players statistics through randomness
     HP = randint(5,20)
     MP = randint(5,20)
@@ -114,7 +114,7 @@ elif input() == "sick":
     print ("Game Over")
     sys.exit(0)
 
-print ("In the distance to the north you can see a small village, to the east you can see a river and to the west a field of wild flowers.")
+print ("You look down at your crinkled schedule, You have a freei, do you want to go to the lunch room, the 1st floor, or the 3rd floor.")
 
 #Remember those functions we created at the start of the code? Well here we are using them in the game.
 print ("\n")
